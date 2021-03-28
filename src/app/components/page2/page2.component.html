@@ -1,0 +1,46 @@
+<div class="row mt-3">
+  <div class="p15" style="width: 100%">
+    <ng-template [ngIf]="isUserPresent()">
+      <div class="m-auto box box-100">
+
+        {{getUser().getFirstName()}} {{getUser().getLastName()}}
+
+      </div>
+    </ng-template>
+  </div>
+</div>
+
+<div class="row  mt-4 mb-4 p15">
+  <div class="m-auto w-25">
+
+    <button class="btn btn-success bt-s" (click)="checkAge()">DOSTĘP</button>
+
+  </div>
+</div>
+
+<div class="row">
+  <div class="m-auto">
+    <div id="rectangle">
+      <ng-template [ngIf]="getAction() == 'win'">
+
+        <a routerLink="/page0">
+          <!--<img src="assets/images/youWin.jpg" class="centered400">-->
+          <img src="https://media.giphy.com/media/DffShiJ47fPqM/giphy.gif" class="centeredGif">
+        </a>
+
+      </ng-template>
+    </div>
+  </div>
+</div>
+
+<div class="row mt-3">
+  <div class="p15" style="width: 100%">
+    <ng-template [ngIf]="getAction() =='lose'">
+      <div class="m-auto box box-50">
+
+        {{getAlarm()}}
+
+      </div>
+    </ng-template>
+  </div>
+</div>

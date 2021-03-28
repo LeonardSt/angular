@@ -1,0 +1,38 @@
+<style>
+  .form-inline.form-inline {
+    width:100%;
+  }
+</style>
+
+<div class="container">
+
+  <nav class="navbar navbar-expand-sm navbar-light mt-1 pl-0 pr-0">
+    <form class="form-inline">
+      <button class="navbar-toggler mb-1" type="button" data-toggle="collapse" data-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse w-100" id="navbarNav">
+        <ul class="navbar-nav w-100">
+          <li class="nav-item w-50">
+            <button type="button" class="btn btn-success btn-lg bt-b mb-1" routerLink="/page0">TYTUŁ</button>
+          </li>
+          <li class="nav-item w-25">
+            <div style="justify-content: flex-end; display: flex; flex-direction: row;">
+            <button type="button" class="btn btn-success bt-s mb-1" routerLink="/page1">Link1</button>
+            </div>
+          </li>
+          <li class="nav-item w-25">
+            <div style="justify-content: flex-end; display: flex; flex-direction: row;">
+            <button type="button" class="btn btn-success bt-s" routerLink="/page2">Link2</button>
+            <!--<a class="nav-link" href="/page2">Link2</a>-->
+            </div>
+          </li>
+        </ul>
+      </div>
+    </form>
+  </nav>
+
+  <router-outlet></router-outlet>
+</div>

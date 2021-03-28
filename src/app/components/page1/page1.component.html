@@ -1,0 +1,46 @@
+<div class="mt-5">
+  <div class="box box-50">Dane użytkownika</div>
+
+  <form [formGroup]="form" class="was-validated mt-5 mb-5">
+
+    <div class="form-group flexcontainer mb-5">
+      <label for="firstNameInput">Imię:</label>
+      <input class="form-control" type="text" formControlName="firstNameForm" id="firstNameInput"
+             [(ngModel)]="firstName" required pattern="[a-zA-Z-']+"/>
+      <div class="invalid-tooltip has-validation">
+        Niewłaściwe imię!
+      </div>
+    </div>
+
+    <div class="form-group flexcontainer mb-5">
+      <label for="lastNameInput">Nazwisko:</label>
+      <input class="form-control" type="text" formControlName="lastNameForm" id="lastNameInput"
+             [(ngModel)]="lastName" required pattern="[a-zA-Z-']+"/>
+      <div class="invalid-tooltip has-validation">
+        Niewłaściwe nazwisko!
+      </div>
+    </div>
+
+    <div class="form-group flexcontainer mb-5">
+      <label for="ageInput">Wiek:</label>
+      <input class="form-control" type="number" formControlName="ageForm" id="ageInput"
+             [(ngModel)]="age" required [min]="1" [max]="100" pattern="^[1-9][0-9]?$|^100$"/>
+      <div class="invalid-tooltip has-validation">
+        Niewłaściwy wiek!
+      </div>
+    </div>
+
+  </form>
+
+  <ng-template [ngIf]="!(form.invalid || form.disabled)">
+    <div class="box box-100">
+      Hello {{firstName}} {{lastName}}!
+    </div>
+  </ng-template>
+
+  <div class="w-25 m-auto">
+    <button class="btn btn-success mt-4 bt-s" [disabled]="form.invalid || form.disabled"
+            (click)="addUser(firstName, lastName, age)" routerLink="/page2">Zapisz
+    </button>
+  </div>
+</div>
