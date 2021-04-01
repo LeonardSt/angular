@@ -4,14 +4,10 @@
   background: gray;
 }
 
-.centered400 {
-  padding-left: calc((500px - 400px) / 2 );
-  padding-top: calc((500px - 400px) / 2 );
-}
-
-.centeredGif {
-  padding-left: calc((500px - 178px) / 2 );
-  padding-top: calc((500px - 119px) / 2 );
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 button {
