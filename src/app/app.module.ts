@@ -7,7 +7,6 @@ import {AppComponent} from './app.component';
 import {Page0Component} from './components/page0/page0.component';
 import {Page1Component} from './components/page1/page1.component';
 import {Page2Component} from './components/page2/page2.component';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -19,8 +18,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
   imports: [
     BrowserModule,
     ReactiveFormsModule,
-    AppRoutingModule,
-    NgbModule
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
